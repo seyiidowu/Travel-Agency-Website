@@ -1,0 +1,103 @@
+/* this css was written by Phillip Abraham*/
+
+.logo {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  h2 {
+    color: rgb(255, 187, 0);
+    padding: 10px;
+    margin-left: 10px;
+}
+
+  .centered {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Comic Sans MS",cursive, sans-serif;
+    font-size: 80px;
+    color: black;
+    opacity: 0.8;
+  }
+
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    
+  }
+
+    .image {
+
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      
+  }
+  
+    .btn {
+  
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #555;
+      color: azure;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      
+  
+    }
+  
+    .btn:hover {
+      background-color: black; }
+  
+
+   .btn2 {
+        background-color: #555;
+        color: azure;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        
+      }
+
+    .btn2:hover {
+      background-color: black;
+
+    }
+
+
+
+  .sec3 {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    justify-content: center;  
+    align-content: space-around;
+    padding: 10px;
+   background-color: bisque;
+   
+ }
+
+ .copyright {
+    color: aliceblue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+ }

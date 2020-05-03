@@ -1,0 +1,54 @@
+/* this css was written by Seyi Idowu*/
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    justify-content: center;
+    background-color: #2196F3;  
+    padding: 2px;
+    
+    align-content: center;
+}
+
+.container-grid>div {
+    background-color: rgb(59, 64, 68);
+    grid-template-rows: 40%;
+    height: 100px;
+    text-align: justify;
+    padding: 2px;
+    font-size: 15px;
+}
+
+input[type=text] {
+    width: 80%;
+    height: 48px;
+    background-color:#555;;
+    padding: 15px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  input[type=date] {
+    width: 80%;
+    height: 48px;
+    background-color: #555;
+    padding: 15px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  input[list=countries] {
+    width: 90%;
+    padding: 15px 20px;
+    background-color:#555;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  input[type=button] {
+    width: 80%;
+    background-color:#555;
+    padding: 15px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }

@@ -1,0 +1,91 @@
+/* this css was written by Seyi Idowu, Alan Chok and Phillip Abraham*/
+
+.destination2-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  grid-gap: 10px;
+
+  background-color: grey;
+}
+
+.destination2-container>div {
+  display: none;
+ background-color: rgb(59, 64, 68);
+  text-align: center;
+  padding: 20px 0;
+  justify-content: center;
+  font-size: 15px;
+  position: relative;
+}
+
+.top-left h3 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 25px;
+  left: 290px;
+  align-self: center;
+  background-color: transparent;
+  height: 5%;
+  border: 5px;
+
+}
+
+
+.hovering-text {
+  display: none;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  font-weight: 900;
+  font-weight: bolder;
+  font-size: large;
+  color: black;
+  background-color: white;
+  transform: translate(-50%, -50%);
+}
+
+.blinking {
+  animation: blinkingText 1.3s linear infinite;
+  position: relative;
+  width: 100%;
+  height: 25px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 30px;
+}
+
+@keyframes blinkingText {
+  0% {  opacity: 0;
+  }
+  50% { opacity: .5;
+  }
+  100% {  opacity: 1;
+  }
+}
+
+.text-block {
+
+text-align: left;
+position: relative;
+background-color: brown;
+top: -320px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.destination-container>div:hover>.hovering-text {
+display: block;
+text-align: center;
+}
+
+h1 {
+text-align: center;
+color:rgb(255, 187, 0);
+
+}
+
+.destinationpic:hover {
+transform: scale(1.1);
+
+}

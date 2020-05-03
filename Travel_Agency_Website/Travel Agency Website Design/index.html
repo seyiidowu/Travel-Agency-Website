@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="indexmenu.css">
+    <link rel="stylesheet" href="indexfooter.css">
+    <link rel="stylesheet" href="wheretogo.css">
+
+    <title>Travel Agency Webpage</title>
+    <style>
+        .responsive {
+            width: 100%;
+            height: auto;
+
+        }
+    </style>
+    <!-- This script was written by Philip Abraham to display the responsive images in the index page -->
+    <script>
+        window.addEventListener("load", myInit, true); function myInit() { startTimer(); textTimer(); }
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function displayPreviousImage() {
+            x = (x <= 0) ? images.length - 1 : x - 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function startTimer() {
+            setInterval(displayNextImage, 5000);
+        }
+
+        let images = [], x = -1;
+        images[0] = "https://images.unsplash.com/photo-1433190152045-5a94184895da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8fd4ff7d204d5f692b984eb52c9f235c&w=1000&q=80";
+        images[1] = "https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1663,c_fill,g_auto,h_935,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170606121226-japan---travel-destination---shutterstock-230107657.jpg";
+        images[2] = "https://www.bestpubquiz.co.uk/wp-content/uploads/2017/11/Destinations-1.jpg";
+        images[3] = "https://cdn.wallpapersafari.com/15/40/HQfwBp.jpg";
+        images[4] = "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80";
+        images[5] = "https://media.gettyimages.com/photos/clearwater-beach-florida-picture-id831727882?s=612x612";
+
+
+        function displayNextText() {
+            y = (y === picText.length - 1) ? 0 : y + 1;
+            document.getElementById("imgText").innerText = picText[y];
+        }
+
+        function displayPreviousText() {
+            y = (y <= 0) ? picText.length - 1 : y - 1;
+            document.getElementById("imgText").innerText = picText[y];
+        }
+
+
+        function textTimer() {
+            setInterval(displayNextText, 5000);
+        }
+
+        let picText = [], y = -1;
+        picText[0] = "Maldives";
+        picText[1] = "Japan";
+        picText[2] = "Spain";
+        picText[3] = "Jamaica";
+        picText[4] = "Banff";
+        picText[5] = "Florida";
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="indeximage.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('div.container').fadeIn(2000);
+            $('div.container-grid').fadeIn(3000);
+
+        });
+
+    </script>
+
+</head>
+
+
+<body
+    style="background-image: url(https://i.ytimg.com/vi/nZSC3Zpe-Qw/maxresdefault.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;"
+    width=100px>
+
+    <!-- The menu and Navigation section was written by Seyi Idowu -->
+
+    <div class="topnav">
+        <div class="topnav-centered">
+            <a href="index.html" class="active" target="_top">Home</a>
+        </div>
+
+        <div class="companylogo">
+            <h3><img src="http://www.runawayguide.com/wp-content/uploads/2014/01/world-travel-experts-list.jpg"
+                    width="45px">Travel Experts</h3>
+        </div>
+
+        <div class="topnav-right">
+            <a href="about_group.html" target="_blank">About</a>
+            <a href="Destinations_group.html" target="_blank">Destinations</a>
+            <a href="register.html" target="_blank">Registration</a>
+            <a href="Contact_group.html" target="_blank">Contact</a>
+        </div>
+
+    </div>
+
+
+    <div class="container" style="display:hidden;">
+        <div class=image>
+            <img id="img"
+                src="https://images.unsplash.com/photo-1433190152045-5a94184895da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8fd4ff7d204d5f692b984eb52c9f235c&w=1000&q=80"
+                alt="Travel pic" style="height: 550px; width: 80%;">
+
+            <div class="centered" id="imgText">Maldives</div>
+
+            <button class="btn" onclick="window.location.href = 'travelpackages.html';">Explore Some More!</button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- This where to go section was written by Seyi Idowu and Alan Chok-->
+    <form action="Destinations_group2.html">
+        <div class="container-grid" style="display:hidden;">
+            <div class="itema">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Where To Go!</h4>
+            </div>
+
+            <div class="itemb"><input type="text" ; name="Wheretogo" placeholder="Where To Go" width="20s">
+            </div>
+
+            <div class="itemc"><input type="date" maxlength="4" name="datedeparture" required></div>
+            <div class="itemd">
+
+                <input list="countries" id="countrytext" style=width:30; placeholder="Travel Places" required>
+                <datalist id="countries">
+                    <option value="Canada">
+                    <option value="USA">
+                    <option value="Asia">
+                    <option value="Dominican Republic">
+                    <option value="Jamaica">
+                    <option value="Europe">
+                </datalist>
+
+            </div>
+            <button class="btn2" onclick="passvalues();">Submit</button>
+            <a href="skyimages.jpg"></a>
+        </div>
+
+    </form>
+    <!--end of where to go section-->
+
+    <br><br><br><br><br><br><br>
+    <!--this section that controls the footer was written by Seyi Idowu-->
+    <footer>
+        <div class="grid-container">
+
+            <div class="item1">
+                <p>5th floor, 700 avenue, SW </p>
+                <p> Calgary, Alberta. T6U 6M4</p>
+                <p><a href="#">+403 999 9999</a> </p>
+                <p><a href="#">contact@travelexpert.com</a></p>
+            </div>
+            <div class="item2">
+                <ul class="links">
+                    <h3>
+                        Company
+                    </h3>
+                    <a href="index.html" target="_top">Home</a><br>
+                    <a href="about_group.html" target="_blank">About</a><br>
+                    <a href="Destinations_group.html" target="_blank">Destinations</a><br>
+                    <a href="register.html" target="_blank">Registration</a><br>
+                    <a href="Contact_group.html" target="_blank">Contact</a>
+                </ul>
+            </div>
+            <div class="item3">
+                <h3 class="footer_title">
+                    Popular destination
+                </h3>
+                <ul class="links double_links">
+                    <a href="#">Indonesia</a><br>
+                    <a href="#">America</a><br>
+                    <a href="#">India</a><br>
+                    <a href="#">Switzerland</a><br>
+                    <a href="#">Italy</a>
+
+                </ul>
+            </div>
+
+            <div class="item4">
+                <h3 class="footer_title">
+                    Company Agents
+                </h3>
+                <ul class="links double_links">
+                    <li> Ms Alicia:<a href="#">587 666 6666, alicia@travelexpert.com</a></li><br>
+                    <li> Ms Chong:<a href="#">799 888 8888, chong@travelexpert.com</a></li><br>
+                    <li> Ms Rice:<a href="#">806 888 8888, rice@travelexpert.com</a></li><br>
+                    <li> Mr Usman:<a href="#">403 888 8888, usman@travelexpert.com</a></li><br>
+                    <li> Mr Fernando:<a href="#">706 888 8888, fernando@travelexpert.com</a></li>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="item5">
+                <p>
+
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+                    is
+                    made with
+                    Travel Expert
+
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+
+
+
+</html>

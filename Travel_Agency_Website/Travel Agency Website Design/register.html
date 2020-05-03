@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Customer Registration</title>
+    <link rel="stylesheet" href="registerstyle.css">
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="indexmenu.css">
+    <link rel="stylesheet" href="indexfooter.css">
+
+    <!-- This validation script was Phillip Abraham -->
+    <script>
+
+        function numValidate1(fieldToCheck, errorID) {
+
+            if (!isNaN(fieldToCheck.value)) { errorID.style.display = "inline" }
+            else { errorID.style.display = "none" }
+        }
+
+        function numValidate2(fieldToCheck, errorID) {
+
+            if (!isNaN(fieldToCheck.value)) { errorID.style.display = "inline" }
+            else { errorID.style.display = "none" }
+        }
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('div.form').fadeIn(2000);
+            $('div.form2').fadeIn(3000);
+
+        });
+
+    </script>
+
+</head>
+
+<body style="background-color: rgb(139, 170, 228);">
+
+    <!-- The menu and Navigation section was written by Seyi Idowu -->
+
+    <div class="topnav">
+        <div class="topnav-centered">
+            <a href="index.html" class="active" target="_top">Home</a>
+        </div>
+
+        <div class="companylogo">
+            <h3><img src="http://www.runawayguide.com/wp-content/uploads/2014/01/world-travel-experts-list.jpg"
+                    width="45px">Travel Experts</h3>
+        </div>
+
+        <div class="topnav-right">
+            <a href="about_group.html" target="_blank">About</a>
+            <a href="Destinations_group.html" target="_blank">Destinations</a>
+            <a href="register.html" target="_blank">Registration</a>
+            <a href="Contact_group.html" target="_blank">Contact</a>
+        </div>
+
+    </div>
+
+    <!-- This section controls the registration page and written by Phillip Abraham -->
+
+    <form action="https://www.w3schools.com/action_page.php" method="GET" target="_blank">
+        <fieldset
+            style="background-image: url(https://images.pexels.com/photos/1046896/pexels-photo-1046896.jpeg?cs=srgb&dl=silhouette-of-person-walking-1046896.jpg&fm=jpg);background-position: center;background-size: cover;">
+            <div class="form" style="display:none;">
+                <div class="pinfo">
+                    <legend>
+                        <h2 class="ml3">Personal Information</h2>
+                    </legend>
+                    First Name <br>
+                    <input type="text" name="firstname" required
+                        onkeyup="numValidate1(this, document.getElementById('numErr1'))">
+                    <span id="numErr1" style="color: red;display: none;">&#x2717;</span>
+                    <br>
+                    <br>
+                    Last Name <br>
+                    <input type="text" name="lastname" required
+                        onkeyup="numValidate2(this, document.getElementById('numErr2'))">
+                    <span id="numErr2" style="color: red;display: none;">&#x2717;</span>
+                    <br>
+                    <br>
+                    Email <br>
+                    <input type="email" id="mail" name="lastname" required>
+                    <br>
+                    <br>
+                    Gender <br>
+                    <input type="checkbox" name="gender" value="male">Male<br>
+                    <input type="checkbox" name="gender" value="female">Female<br>
+                    <input type="checkbox" name="gender" value="other">Other<br>
+                </div>
+
+                <div class="address">
+                    <h2 class="ml2" style="text-align: center;">Address</h2><br>
+                    Street <br>
+                    <input type="text" name="street" required>
+                    <br>
+                    <br>
+                    City <br>
+                    <input list="cities" required>
+                    <datalist id="cities">
+                        <option value="Calgary">
+                        <option value="Edmonton">
+                        <option value="Grande Praire">
+                        <option value="Fort Mcmurray">
+                        <option value="Red Deer">
+                        <option value="Lagos">
+                    </datalist>
+                    <br>
+                    <br>
+                    Country <br>
+                    <input list="countries" required>
+                    <datalist id="countries">
+                        <option value="Canada">
+                        <option value="USA">
+                        <option value="Nigeria">
+                        <option value="India">
+                        <option value="Jamaica">
+                    </datalist>
+                </div>
+
+                <div class="departure">
+                    <h2 class="ml4" style="text-align: center;">Departure</h2>
+                    Country <br>
+                    <input list="countries" required>
+                    <datalist id="countries">
+                        <option value="Canada">
+                        <option value="USA">
+                        <option value="Nigeria">
+                        <option value="India">
+                        <option value="Jamaica">
+                    </datalist>
+                    <br>
+                    <br>
+                    City <br>
+                    <input list="cities" required>
+                    <datalist id="cities">
+                        <option value="Calgary">
+                        <option value="Edmonton">
+                        <option value="Grande Praire">
+                        <option value="Fort Mcmurray">
+                        <option value="Red Deer">
+                        <option value="Lagos">
+                    </datalist>
+                    <br>
+                    <br>
+                    Airport <br>
+                    <input type="text" name="departureairport" required>
+                    <br>
+                    <br>
+                    Date leaving <br>
+                    <input type="date" name="dateleaving" required>
+                    <br>
+                    <br>
+                </div>
+
+                <div class="arrival">
+                    <h2 class="ml5" style="text-align: center;">Arrival</h2>
+                    Country <br>
+                    <input list="countries" required>
+                    <datalist id="countries">
+                        <option value="Canada">
+                        <option value="USA">
+                        <option value="Nigeria">
+                        <option value="India">
+                        <option value="Jamaica">
+                    </datalist>
+                    <br>
+                    <br>
+                    City <br>
+                    <input list="cities" required>
+                    <datalist id="cities">
+                        <option value="Calgary">
+                        <option value="Edmonton">
+                        <option value="Grande Praire">
+                        <option value="Fort Mcmurray">
+                        <option value="Red Deer">
+                        <option value="Lagos">
+                    </datalist>
+                    <br>
+                    <br>
+                    Airport <br>
+                    <input type="text" name="arrivalairport" required>
+                    <br>
+                    <br>
+                    Date arriving <br>
+                    <input type="date" name="datearriving" required>
+                    <br>
+                    <br>
+                </div>
+                <div class="container2">
+                    <div class="petinfo">
+                        <legend>Are you travelling with any of the following pets?:</legend>
+                        <input type="radio" name="pettype" value="cat">Cat <br>
+                        <input type="radio" name="pettype" value="dog">Dog <br>
+                        <input type="radio" name="pettype" value="bird">Bird <br>
+                        <input type="radio" name="pettype" value="other">Other<br>
+                        <input type="radio" name="pettype" value="None" checked>None
+                        <br><br>
+                        <legend>How many bags are you checking in?:</legend>
+                        <input type="radio" name="bag" value="1">1 <br>
+                        <input type="radio" name="bag" value="2">2 <br>
+                        <input type="radio" name="bag" value="None" checked>None
+                        <br><br>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="registerbutton">
+                        <input type="reset" class="button" value="Reset the form">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="submit" class="button" value="Register">
+                    </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+        </div>
+        <br>
+        <br>
+
+        <div class="form2" style="display:none;">
+            <fieldset>
+                <div style="background-color: rgb(205, 222, 253);width: 200px;padding: 20px;">
+                    <legend>Why choose us?</legend>
+                    <p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam
+                        elerisque mi id faucibus iaculis vitae pulvinar.</p>
+                    <br><br>
+            </fieldset>
+
+            <fieldset>
+                <div style="background-color: rgb(205, 222, 253);width: 200px;padding: 20px;">
+                    <legend>Travel Insurance</legend>
+                    <p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam
+                        elerisque mi id faucibus iaculis vitae pulvinar.</p>
+                    <br><br>
+            </fieldset>
+            <fieldset>
+                <div style="background-color: rgb(205, 222, 253);width: 200px;padding: 20px;">
+                    <legend>Best Price Guarantee</legend>
+                    <p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam
+                        elerisque mi id faucibus iaculis vitae pulvinar.</p>
+                    <br><br>
+            </fieldset>
+        </div>
+    </form>
+    <footer>
+        <div class="grid-container">
+
+            <!-- The footer section was written by Seyi Idowu -->
+
+            <div class="item1">
+                <p>5th floor, 700 avenue, SW </p>
+                <p> Calgary, Alberta. T6U 6M4</p>
+                <p><a href="#">+403 999 9999</a> </p>
+                <p><a href="#">contact@travelexpert.com</a></p>
+            </div>
+            <div class="item2">
+                <ul class="links">
+                    <h3>
+                        Company
+                    </h3>
+                    <a href="index.html" target="_top">Home</a><br>
+                    <a href="about_group.html" target="_blank">About</a><br>
+                    <a href="Destinations_group.html" target="_blank">Destinations</a><br>
+                    <a href="register.html" target="_blank">Registration</a><br>
+                    <a href="Contact_group.html" target="_blank">Contact</a>
+                </ul>
+            </div>
+            <div class="item3">
+                <h3 class="footer_title">
+                    Popular destination
+                </h3>
+                <ul class="links double_links">
+                    <a href="#">Indonesia</a><br>
+                    <a href="#">America</a><br>
+                    <a href="#">India</a><br>
+                    <a href="#">Switzerland</a><br>
+                    <a href="#">Italy</a>
+
+                </ul>
+            </div>
+
+            <div class="item4">
+                <h3 class="footer_title">
+                    Company Agents
+                </h3>
+                <ul class="links double_links">
+                    <li> Ms Alicia:<a href="#">587 666 6666, alicia@travelexpert.com</a></li><br>
+                    <li> Ms Chong:<a href="#">799 888 8888, chong@travelexpert.com</a></li><br>
+                    <li> Ms Rice:<a href="#">806 888 8888, rice@travelexpert.com</a></li><br>
+                    <li> Mr Usman:<a href="#">403 888 8888, usman@travelexpert.com</a></li><br>
+                    <li> Mr Fernando:<a href="#">706 888 8888, fernando@travelexpert.com</a></li>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="item5">
+                <p>
+
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+                    is
+                    made with
+                    Travel Expert
+
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"
+        integrity="sha256-98Q574VkbV+PkxXCKSgL6jVq9mrVbS7uCdA+vt0sLS8=" crossorigin="anonymous"></script>
+
+    <script>
+
+        var textWrapper = document.querySelector(".ml3");
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.ml3 .letter',
+                opacity: [0, 1],
+                easing: "easeInOutQuad",
+                duration: 2250,
+                delay: (el, i) => 100 * (i + 1)
+            }).add({
+                targets: '.ml3',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+
+    </script>
+
+    <script>
+
+        var textWrapper = document.querySelector(".ml2");
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.ml2 .letter',
+                opacity: [0, 1],
+                easing: "easeInOutQuad",
+                duration: 2250,
+                delay: (el, i) => 150 * (i + 1)
+            }).add({
+                targets: '.ml2',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+
+    </script>
+
+    <script>
+
+        var textWrapper = document.querySelector(".ml4");
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.ml4 .letter',
+                opacity: [0, 1],
+                easing: "easeInOutQuad",
+                duration: 2250,
+                delay: (el, i) => 150 * (i + 1)
+            }).add({
+                targets: '.ml4',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+
+    </script>
+
+    <script>
+
+        var textWrapper = document.querySelector(".ml5");
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.ml5 .letter',
+                opacity: [0, 1],
+                easing: "easeInOutQuad",
+                duration: 2250,
+                delay: (el, i) => 150 * (i + 1)
+            }).add({
+                targets: '.ml5',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+
+    </script>
+
+
+</body>
+
+
+</html>

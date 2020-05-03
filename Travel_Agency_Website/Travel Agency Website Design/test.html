@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <script>
+        $(document).ready(function () {
+            $("#buttontest").click(function () {
+                $(".all").hide();
+                if ($('#full_day').val().toLocaleLowerCase() == "yes") {
+                    $("#yes").show();
+                } else if ($('#full_day').val().toLocaleLowerCase() == "no") {
+                    $("#no").show();
+                } else {
+                    $("#incorrect").show("500");
+                }
+            });
+           // $("#full_day").change(function () {
+               // $("#incorrect").hide("500");
+            //});
+        });
+    </script>
+    <style>
+        #yes {
+            display: none;
+        }
+
+        #no {
+            display: none;
+        }
+
+        #incorrect {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <p>type "yes" or "no"</p>
+    <div class="all" id="yes">
+        That's Correct!
+    </div>
+    <div class="all" id="no">
+        Also correct!
+    </div>
+    <div class="all" id="incorrect">
+        Sorry, Try again!
+    </div>
+    <input type='text' id="full_day" />
+    <input type='button' id="buttontest" value="clickme" />
+</body>
+</html>
